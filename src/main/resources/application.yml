@@ -1,0 +1,22 @@
+
+spring:
+  servlet:
+    #https://blog.csdn.net/u010429286/article/details/54381705
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    cache: false
+    servlet:
+      content-type: text/html
+server:
+  port: 80
+
+#\u538B\u7F29\u7684\u56FE\u7247\u5927\u5C0F
+file:
+  maxByte: 200

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>上传图片</title>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<form action="../compressImage" method="post" enctype="multipart/form-data">
+    <p th:text="${number}" id="number">
+    <div id="addelement"></div>
+<!--    <input type="file" name="file" accept="image/*">-->
+    <input type="submit" value="上传" class="btn btn-success">
+</form>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var num = $("#number").text();
+        var addelement = $("#addelement");
+        for (var i = 1; i <= num; i++) {
+            addelement.append("<input type=\"file\" name=\"addFile\" accept=\"image/*\">");
+        }
+    });
+</script>
+</html>
